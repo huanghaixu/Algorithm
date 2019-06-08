@@ -67,7 +67,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             swap(minPos,i);
         }
     }
-
     private void swap(int m, int n) {
         int tmp=items[m];
         items[m]=items[n];
