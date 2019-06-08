@@ -72,7 +72,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         items[m]=items[n];
         items[n]=tmp;
     }
-
     private void generateItems() {
         items = new Integer[10];
         Random generator = new Random();
