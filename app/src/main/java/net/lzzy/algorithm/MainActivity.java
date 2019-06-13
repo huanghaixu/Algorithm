@@ -35,14 +35,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 displayItems(edtItems);
                 break;
             case R.id.activity_main_btn_sort:
-                directSort();
+                //directSort();
+                insettSort() ;
                 displayItems(tvResult);
                 break;
             default:
                 break;
         }
     }
-
     private void displayItems(TextView tv) {
         String display = "";
         for (Integer i : items) {
@@ -65,6 +65,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
             }
             swap(minPos,i);
+        }
+    }
+    private void insettSort(){
+
+        for (int i=1;i<items.length;i++){
+            int j=i-1;
+            if (items[j].compareTo(items[i])<0){
+                continue;
+            }
+            Integer tmp=items[i];
+            while (j>=0&&items[i].compareTo(tmp)>0){
+                items[j+1]=items[j];
+                j--;
+            }
+            items[j+i]=tmp;
         }
     }
     private void swap(int m, int n) {
