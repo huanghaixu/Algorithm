@@ -22,6 +22,11 @@ public abstract class BaseSort <T extends Comparable<? super T>>{
         swapCout=0;
         moveStep=0;
     }
+
+    public BaseSort() {
+
+    }
+
     boolean bigger(T a, T b){
         compareCount++;
         return a.compareTo(b)>0;
